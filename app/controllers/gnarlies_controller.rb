@@ -4,7 +4,7 @@ class GnarliesController < ApplicationController
   before_action :authorize_destroy, only: [:destroy]
 
   def index
-    @gnarlies = Gnarlie.all.sort_by {|gnarlie| gnarlie.created_at}.reverse
+    @gnarlies = Gnarlie.all
   end
   def new
     @gnarlie = Gnarlie.new

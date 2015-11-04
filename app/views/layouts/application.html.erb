@@ -16,7 +16,7 @@
       <% if current_user %>
         <%= link_to "Profile", user_path(current_user) %>
         &nbsp;&nbsp;|&nbsp;&nbsp;
-        <%= link_to 'Log out of account', session_path, method: :delete %>
+        <%= link_to 'Log out of account', session_path('FU'), method: :delete %>
       <% else %>
         <%= link_to "Create an account", new_user_path %>
         &nbsp;&nbsp;|&nbsp;&nbsp;
