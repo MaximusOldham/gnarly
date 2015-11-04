@@ -11,10 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151103011011) do
+ActiveRecord::Schema.define(version: 20151103220853) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "gnarlies", force: :cascade do |t|
+    t.string   "text"
+    t.string   "image_uri"
+    t.integer  "likes",      default: 0
+    t.integer  "user_id"
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+  end
+
+  add_index "gnarlies", ["user_id"], name: "index_gnarlies_on_user_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "name"
@@ -25,4 +36,5 @@ ActiveRecord::Schema.define(version: 20151103011011) do
     t.datetime "updated_at",      null: false
   end
 
+  add_foreign_key "gnarlies", "users"
 end

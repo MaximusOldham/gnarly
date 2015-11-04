@@ -1,0 +1,9 @@
+<h1>Welcome <%= @user.name %></h1>
+
+<p><%= @user.email %></p>
+
+<%= button_to "Edit account", edit_user_path(@user), method: :get %>
+
+<%= button_to "Create a Gnarlie", new_gnarly_path, method: :get %>
+
+

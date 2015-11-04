@@ -1,0 +1,5 @@
+<section class="gnarly-pic">
+ <p><%= @gnarlie.text %></p>
+ <%= image_tag @gnarlie.image, class: "gnarly-pic" %>
+ <%= button_to "Tubular!", edit_gnarlie_path(@gnarlie), method: :get %>
+</section>
