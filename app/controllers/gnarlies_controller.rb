@@ -17,9 +17,9 @@ class GnarliesController < ApplicationController
   # nested route /users/:user_id/gnarlies
   def create
     @gnarlie = Gnarlie.new(gnarlie_params)
-    @gnarlies.user = current_user
+    @gnarlie.user = current_user
 
-    if @gnarlies.save
+    if @gnarlie.save
       flash[:notice] = "You're freakin Gnarly!"
       redirect_to user_path(current_user)
     else

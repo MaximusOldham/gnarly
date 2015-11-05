@@ -1,5 +1,14 @@
 <section class="gnarly-pic">
- <p><%= @gnarlie.text %></p>
- <%= image_tag @gnarlie.image, class: "gnarly-pic" %>
- <%= button_to "Tubular!", edit_gnarlie_path(@gnarlie), method: :get %>
+  <%= form_for @gnarlie do |f| %>
+    <div class="field">
+      <%= f.label :text %>
+      <%= f.text_field :text %>
+    </div>
+    <div class="field">
+      <%= f.label :image_uri %>
+      <%= f.text_field :image_uri %>
+    </div>
+
+    <div class="actions"><%= f.submit "Rad!" %></div>
+  <% end %>
 </section>
