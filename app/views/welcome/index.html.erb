@@ -1,7 +1,8 @@
 <h1>Gnarly Homepage</h1>
 <% @gnarlies.each do |g| %>
   <div class="gnarlie">
-    <img src="<%= g.image_uri %>" width="250">
+    <h3><%= g.user.name %> <span>(<%= g.user.username %>)</span></h3>
+    <img src="<%= g.image_uri %>" width="350">
     <h3><%= g.text %></h3>
   </div>
 <% end %>

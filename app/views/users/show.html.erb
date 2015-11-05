@@ -6,4 +6,13 @@
 
 <%= button_to "Create a Gnarlie", new_gnarly_path, method: :get %>
 
+<hr>
+
+<% @gnarlies.each do |g| %>
+  <div class="gnarlie">
+    <img src="<%= g.image_uri %>" width="350">
+    <h3><%= g.text %></h3>
+    <%= link_to " X ", gnarly_path(g), method: :delete %>
+  </div>
+<% end %>
 

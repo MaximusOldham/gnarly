@@ -1,22 +1,21 @@
 class GnarliesController < ApplicationController
   before_action :authenticate,      only: [:create, :destroy]
   before_action :authorize_create,  only: [:create]
-  before_action :authorize_destroy, only: [:destroy]
 
   def index
-    @gnarlies = Gnarlie.all
+    @gnarlies = Gnarly.all
   end
   def new
-    @gnarlie = Gnarlie.new
+    @gnarlie = Gnarly.new
   end
 
   def show
-    @gnarlie = Gnarlie.find(params[:id])
+    @gnarlie = Gnarly.find(params[:id])
   end
 
   # nested route /users/:user_id/gnarlies
   def create
-    @gnarlie = Gnarlie.new(gnarlie_params)
+    @gnarlie = Gnarly.new(gnarlie_params)
     @gnarlie.user = current_user
 
     if @gnarlie.save
@@ -24,25 +23,19 @@ class GnarliesController < ApplicationController
       redirect_to user_path(current_user)
     else
       render 'new'
-    #   if params[:redirect]
-    #     redirect_to params[:redirect]
-    #   else
-    #     redirect_to gnarly_path(@gnarlie)
-    #   end
-    # else
-    #   render :"users/show"
     end
   end
 
   def destroy
-    @gnarlie.destroy
+    gnarly = Gnarly.find(params[:id])
+    gnarly.destroy
     redirect_to user_path(current_user)
   end
 
   private
 
     def gnarlie_params
-      params.require(:gnarlie).permit(:text, :image_uri)
+      params.require(:gnarly).permit(:text, :image_uri)
     end
 
     def authenticate
@@ -56,7 +49,7 @@ def authorize_create
     end
 
     def authorize_destroy
-      @gnarlie = Gnarlie.find(params[:id])
+      @gnarlie = Gnarly.find(params[:id])
       redirect_to root_path if @mumble.user != current_user
     end
 end

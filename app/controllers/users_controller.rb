@@ -18,7 +18,7 @@ before_action :authenticate, only: [:show, :edit, :update]
   end
 
   def show
-      # @user = User.find(params[:id]) # being done in authorize
+    @gnarlies = current_user.gnarlies
   end
 
   def edit

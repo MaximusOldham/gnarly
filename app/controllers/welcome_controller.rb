@@ -1,5 +1,5 @@
 class WelcomeController < ApplicationController
   def index
-    @gnarlies = Gnarlie.all
+    @gnarlies = Gnarly.all
   end
 end
