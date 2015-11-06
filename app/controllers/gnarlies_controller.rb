@@ -32,6 +32,13 @@ class GnarliesController < ApplicationController
     redirect_to user_path(current_user)
   end
 
+  def like
+    gnarly = Gnarly.find(params[:id])
+    gnarly.likes += 1
+    gnarly.save
+    redirect_to root_path
+  end
+
   private
 
     def gnarlie_params

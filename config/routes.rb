@@ -6,5 +6,5 @@ Rails.application.routes.draw do
   resources :sessions, only: [:new, :create, :destroy]
   # resources :gnarly, only: [:create, :new, :index, :show, :destroy]
   get '/login', to: 'sessions#new'
-  get '/gnarlies/:id/like', to: 'gnarlies#like'
+  get '/gnarlies/:id/like', to: 'gnarlies#like', as: :like
 end
