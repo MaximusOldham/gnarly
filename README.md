@@ -9,11 +9,11 @@
 <(https://rocky-falls-7157.herokuapp.com/)>
 
 ###ERD Module###
-![](https://i.imgur.com/y9gTQkW.jpg)>
+<(https://i.imgur.com/y9gTQkW.jpg)>
 
 ###Screen Shots
-![](https://i.imgur.com/hfnq0Zq.jpg)
-![](https://i.imgur.com/8XnOXqf.jpg)
+<(https://i.imgur.com/hfnq0Zq.jpg)
+<(https://i.imgur.com/8XnOXqf.jpg)
 
 #** MVP **
 ​
