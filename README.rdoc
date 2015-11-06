@@ -15,7 +15,7 @@
 ![](https://i.imgur.com/hfnq0Zq.jpg)
 ![](https://i.imgur.com/8XnOXqf.jpg)
 
-#** MVP **
+###MVP
 ​
 - [x] As an admin user, I'd like to **'see'** all of my friends' gnarlies(posts) on a single page.
 ​
@@ -40,7 +40,7 @@
 - [x] As and admin user, it'll be nice to see the options on a **top nav bar** in order to navigate my web app.
 ​
 ​
-#**Icebox**
+###Icebox
 ​
 - [x] It would be nice to have a **search bar** in order to find friend and new users.
 ​
