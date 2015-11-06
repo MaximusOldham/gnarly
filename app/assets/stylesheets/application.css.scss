@@ -19,13 +19,12 @@
 @import "bootstrap";
 
 body {
-    background: url("wave.jpg") no-repeat center center fixed;
+    background: image-url("chillbackground.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
 }
-
 
 
 h1 {
