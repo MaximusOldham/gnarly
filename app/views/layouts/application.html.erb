@@ -10,17 +10,17 @@
 </head>
 <body>
   <header>
-    <nav>
-      <%= link_to "Home", root_path %>
+    <nav class="navbar navbar-inverse">
+      <%= link_to "Home", root_path, :class=>"btn btn-primary" %>
       &nbsp;&nbsp;|&nbsp;&nbsp;
       <% if current_user %>
-        <%= link_to "Profile", user_path(current_user) %>
+        <%= link_to "Profile", user_path(current_user), :class=>"btn btn-primary" %>
         &nbsp;&nbsp;|&nbsp;&nbsp;
-        <%= link_to 'Log out of account', session_path('FU'), method: :delete %>
+        <%= link_to 'Log out of account', session_path('FU'), :class=>"btn btn-primary", method: :delete %>
       <% else %>
-        <%= link_to "Create an account", new_user_path %>
+        <%= link_to "Create an account", new_user_path, :class=>"btn btn-primary" %>
         &nbsp;&nbsp;|&nbsp;&nbsp;
-        <%= link_to "Log in to account", new_session_path %>
+        <%= link_to "Log in to account", new_session_path, :class=>"btn btn-primary" %>
       <% end %>
   </nav>
 </header>

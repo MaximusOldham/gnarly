@@ -1,15 +1,18 @@
-<h1>Gnarly Homepage</h1>
+<h1 class='text-center'>Get Gnarly</h1>
 <% @gnarlies.each do |g| %>
 
   <div class="gnarlie">
     <h3><span><%= g.user.username %></span></h3>
     <img src="<%= g.image_uri %>" width="350">
     <h3><%= g.text %></h3>
+
+       <p><%= g.created_at.strftime('%a %b %d') %></p>
     <%= link_to like_path(g) do %>
       <span class="glyphicon glyphicon-flash btn btn-xs btn-default"></span>
     <% end %>
     <span class="likes">&nbsp;&nbsp;<%= g.likes %></span>
   </div>
+  <br>
 <% end %>
 
 

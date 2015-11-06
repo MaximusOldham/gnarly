@@ -1,6 +1,7 @@
-<% @gnarlies.each do |gnarlie| %>
+<% @gnarlies.order(id: :desc).each do |gnarlie| %>
   <section class="gnarly-pic">
    <p><%= gnarlie.text %></p>
+   <p><%= gnarlie.created_at %></p>
    <%= image_tag gnarlie.image_uri, class: "gnarly-pic" %>
    <%= button_to "Tubular!", edit_gnarly_path(gnarlie), method: :get %>
   </section>
